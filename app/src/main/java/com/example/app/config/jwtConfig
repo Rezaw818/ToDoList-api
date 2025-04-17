@@ -1,0 +1,14 @@
+@Bean
+@Order(Ordered.HIGHEST_PRECEDENCE)
+public FilterRegistrationBean<Filter> jwtFilterRegistration() {
+    FilterRegistrationBean<Filter> registrationBean = new FilterRegistrationBean<>();
+    registrationBean.setFilter(jwtFilter);
+    registrationBean.addUrlPatterns(
+        "/api/*",           // همه APIها
+        "!/api/user",       // به جز /api/user
+        "!/api/auth/*"      // به احراز هویت هم اعمال نشود
+    );
+    registrationBean.setName("JwtFilter");
+    registrationBean.setOrder(1);
+    return registrationBean;
+}
