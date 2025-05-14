@@ -1,0 +1,36 @@
+
+
+.list-item{
+font-size: 1rem;
+    padding: 1.5rem;
+   border-radius: 5px;
+    background-color: cadetblue;
+    font-family : "Arial Rounded MT Bold";
+    color: black;
+    width: 30rem;
+    justify-self: center;
+    margin-top: 1.5rem;
+    box-shadow: 2px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.list-item input{
+float: right;
+    width: 50px;
+     align-self: center;
+}
+
+
+input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+
+}
+input[type="checkbox"]:hover{
+
+}
+
